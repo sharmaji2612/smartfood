@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from smart-food-menu.web.app/tab.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Sep 2021 19:42:12 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&amp;display=swap" rel="stylesheet">
+    <style>
+            body {
+            background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center center/cover;
+        }
+        
+        h2 {
+            text-align: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 4.5rem;
+            text-decoration: underline;
+            text-decoration-color: orange;
+            text-shadow: 2px 2px 5px red;
+        }
+        
+        .styled-table {
+            border-collapse: collapse;
+            margin: auto;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-size: 1.7rem;
+        }
+        
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+        
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #1c044b;
+            font-size: 1.6rem;
+        }
+        
+        a {
+            display: inline-block;
+            color: #008000;
+            text-transform: uppercase;
+            text-decoration: none;
+            overflow: hidden;
+            padding: 3px 17px;
+            font-size: 4rem;
+            border-radius: 19px;
+            color: #111;
+            background: rgb(195 243 3 / 44%);
+            box-shadow: 0 0 50px #07d89e;
+            font-family: 'Lobster', cursive;
+        }
+        /*creating animation effect*/
+        
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+            -webkit-animation: blink-animation 1s steps(5, start) infinite;
+            border: none;
+            background-color: rgb(195 243 3 / 44%);
+            margin-top: 40px;
+        }
+        
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+        
+        @-webkit-keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+    </style>
+</head>
+
+<body>
+    <table class="styled-table">
+        <thead>
+            <tr>
+
+                <th>Dish</th>
+                <th>Quantity</th>
+                <th>Price</th>
+
+
+            </tr>
+        </thead>
+
+        <h2>Your Order</h2>
+        <tbody class="active-row">
+
+            <tr class="active-row">
+
+                <td>Samosa </td>
+                <td>3</td>
+                <td>200</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>kachori</td>
+                <td>3</td>
+                <td>400</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Burger </td>
+                <td>1</td>
+                <td>150</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Samosa </td>
+                <td>3</td>
+                <td>200</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Samosa </td>
+                <td>3</td>
+                <td>200</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Samosa </td>
+                <td>3</td>
+                <td>200</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Samosa </td>
+                <td>3</td>
+                <td>200</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>kachori</td>
+                <td>3</td>
+                <td>400</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>Idali</td>
+                <td>4</td>
+                <td>400</td>
+
+            </tr>
+            <tr class="active-row">
+
+                <td>kachori</td>
+                <td>3</td>
+                <td>400</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="cart__footer">
+        <h3>Total: ₹ <span class="cart__total">0</span></h3>
+        <button class="blink"> <a>Congratulations</a> </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

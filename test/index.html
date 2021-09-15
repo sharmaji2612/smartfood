@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from smart-food-menu.web.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Sep 2021 19:42:05 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../kit.fontawesome.com/d36140f520.js" crossorigin="anonymous"></script>
+
+    <title>Shopping Cart Project</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+        
+        .form-popup {
+            display: none;
+            position: sticky;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+        
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        .form-container .butn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .form-container .cancel {
+            background-color: red;
+        }
+        
+        .form-container .butn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/d36140f520.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__center container">
+            <div class="nav__logo">
+                <h1>Menu<span>Q</span></h1>
+            </div>
+
+            <ul class="nav__list">
+
+                <div class="cart__icon">
+                    <h2> Order</h2>
+                    <span class="item__total">0</span>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <svg>
+          <use xlink:href="images/sprite.svg#icon-menu"></use>
+        </svg>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <!-- Products -->
+    <section class="products">
+        <div class="product__center">
+            <!-- Single Product -->
+            <!-- <div class="product">
+        <div class="image__container">
+          <img src="./images/product-1.jpg" alt="" />
+        </div>
+        <div class="product__footer">
+          <h1>The Original Super Donut</h1>
+          <div class="rating">
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+              </svg>
+            </span>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+              </svg>
+            </span>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+              </svg>
+            </span>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+              </svg>
+            </span>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="bottom">
+            <div class="btn__group">
+              <a href="#" class="btn addToCart">Add to Cart</a>
+              <a href="#" class="btn view">View</a>
+            </div>
+            <div class="price">$255.99</div>
+          </div>
+        </div>
+      </div> -->
+            <!-- End of Single Product -->
+        </div>
+    </section>
+
+    <section class="cart__overlay">
+        <div class="cart">
+            <span class="close__cart">
+        <svg>
+          <use xlink:href="images/sprite.svg#icon-cross"></use>
+        </svg>
+      </span>
+            <h1>You Ordered</h1>
+            <div class="cart__centent">
+                <!-- Cart Item -->
+                <!-- <div class="cart__item">
+          <img src="./images/product-1.jpg" alt="">
+          <div>
+            <h3>The Original Super Donut</h3>
+            <h3 class="price">$750</h3>
+          </div>
+          <div>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-angle-up"></use>
+              </svg>
+            </span>
+            <p>3</p>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
+              </svg>
+            </span>
+          </div>
+
+          <div>
+            <span class="remove__item">
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-trash"></use>
+              </svg>
+            </span>
+          </div>
+        </div> -->
+            </div>
+
+            <div class="cart__footer">
+                <h3>Total: ₹ <span class="cart__total">0</span></h3>
+
+            </div>
+        </div>
+    </section>
+    <div class="bot">
+
+        <button id="star" onclick="openForm()"><span> <i class="fa fa-sign-in"></i></span><br>Login</button>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="butn"> <a href = "login.html">Login</a></button>
+                <button type="button" class="butn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
